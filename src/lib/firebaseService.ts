@@ -40,7 +40,9 @@ export const createSession = async (
   adminId: string
 ) => {
   const sessionRef = doc(collection(db, "sessions"));
-  const shareableLink = `${window.location.origin}/s/${sessionRef.id}`;
+  const shareableLink =
+  `${window.location.origin}${import.meta.env.BASE_URL}s/${shareableId}`;
+
 
   await setDoc(sessionRef, {
     sessionName,
