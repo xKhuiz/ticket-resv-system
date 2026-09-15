@@ -99,7 +99,7 @@ export default function App() {
 
         <div className="flex gap-4 justify-center">
           <a
-            href={`${import.meta.env.BASE_URL}admin`}
+            href="/ticket-resv-system/admin"
             className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 transition-colors shadow-sm"
           >
             Admin Login
