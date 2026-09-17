@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "copy-index.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
