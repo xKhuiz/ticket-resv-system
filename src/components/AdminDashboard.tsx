@@ -92,10 +92,7 @@ export function AdminDashboard({ user }: { user: any }) {
       return;
     }
     const limit = parseInt(ticketLimit);
-    if (isNaN(limit) || limit < 1 || limit > 200) {
-      toast.error("Ticket limit must be between 1 and 200");
-      return;
-    }
+    if (isNaN(limit) || limit < 1 || limit > 500) {500}
     setCreating(true);
     try {
       const session = await createSession(sessionName, limit, user.uid);
@@ -404,12 +401,12 @@ export function AdminDashboard({ user }: { user: any }) {
               />
             </div>
             <div>
-              <Label htmlFor="ticketLimit">Number of Tickets (1-200)</Label>
+              <Label htmlFor="ticketLimit">Number of Tickets (1-500)</Label>
               <Input
                 id="ticketLimit"
                 type="number"
                 min="1"
-                max="200"
+                max="500"
                 value={ticketLimit}
                 onChange={(e) => setTicketLimit(e.target.value)}
               />
